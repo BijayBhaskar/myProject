@@ -1,0 +1,14 @@
+#signup {
+    background-color: hsl(0, 100%, 74%) ;
+    background-image: url("images/bg-intro-desktop.png");
+    font-family: "Arial";
+    font-size: 16px;
+}
+p {
+    background: hsl(248, 32%, 49%);
+    color: white;
+    padding: 2px;
+}
+h2, span {
+    color: white;
+}

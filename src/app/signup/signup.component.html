@@ -1,0 +1,91 @@
+<div id ="signup" class="row background">
+
+    <div class="col-sm-6 background-left p-5 pt-5">
+        <h2>Learn to code by watching others</h2>
+        <span>
+           See how experienced developers solves the
+           problems in a real-time. Watching the
+           scripted tutorial is great, but understanding
+           how deveoplers think is invaluable.
+        </span>
+    </div>
+    
+    <div class="col-sm-6 background-right p-5 pb-5">
+      <div class="row">
+        <div class="offset-sm-2 col-sm-8">
+            
+            <p class="text-center"><strong>Try it free 7 days </strong> then $20/mo. thereafter</p>
+          <div class="card text-blank border-0">
+            <div class="card-body">
+              <!-- <div class="card-title text-center">
+               
+              </div> -->
+  
+              <div class="card-text">
+  
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+                  <div class="form-row">
+                    <div class="form-group col-sm-6">
+                      <input type="text" class="form-control" placeholder="First Name" [formControl]="$any(myForm).controls['firstName']">
+                    </div>
+                    <div class="alert alert-danger" *ngIf="(!myForm.controls['firstName'].valid) && (myForm.controls['firstName'].touched)">
+                        First name are required
+                      </div>
+      
+                    <div class="form-group col-sm-6">
+                      <input type="text" class="form-control" placeholder="Last Name" [formControl]="$any(myForm).controls['lastName']">
+                    </div>
+                  </div>
+  
+                  <div class="alert alert-danger" *ngIf="(!myForm.controls['lastName'].valid) && (myForm.controls['lastName'].touched)">
+                   Last name are required
+                  </div>
+  
+                  <div class="form-group">
+  
+                    <input type="email" placeholder="Enter your email" class="form-control" [formControl]="$any(myForm).controls['email']">
+                
+  
+                  </div>
+  
+                  <div class="alert alert-danger" *ngIf="!myForm.controls['email'].valid && myForm.controls['email'].touched">
+                    A valid email is required
+                  </div>
+  
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" [formControl]="$any(myForm).controls['password']">
+                  </div>
+  
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirm Password" [formControl]="$any(myForm).controls['confirmPassword']">
+                  </div>
+  
+                  <div class="alert alert-danger" *ngIf="!myForm.controls['password'].valid && myForm.controls['password'].touched">
+                    Password should be atleast 6 characters long.
+                  </div>
+                  
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-block btn-success" [disabled]="!myForm.valid">CLAIM YOUR FREE TRIAL</button><br>
+                    <small class="form-text text-muted">
+                        By clicking the button you are aggreeing to <a class="text-danger" href="#">Terms & Services</a>
+                    </small>
+                  </div>
+                </form>
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="alert alert-success" *ngIf="message.length > 0">
+            {{ message }}
+          </div>
+  
+          <div class="alert alert-danger" *ngIf="userError">
+            {{ userError.message }}
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+</div>
